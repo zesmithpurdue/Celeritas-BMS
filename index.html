@@ -8,10 +8,52 @@
 		<link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
 		<link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
 		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/ekko-lightbox.css">
+		<link rel="stylesheet" href="css/darsk.css">		
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		<title>Zachary Smith by zesmithpurdue</title>
+		
+		        <style type="text/css">
+            /* i like padding - you can ignore this css. see the actual css / less files in the repository for styling the gallery navigation */
+            div.row > div > div.row {
+                margin-bottom: 15px;
+            }
+
+            body {
+                padding-bottom: 50px;
+            }
+
+            div.top-header {
+                margin-bottom:100px;
+            }
+
+            h3.page-header {
+                margin-top: 50px;
+            }
+
+            figure {
+                position: relative;
+            }
+
+            figure figcaption {
+                font-size: 22px;
+                color: #fff;
+                text-decoration: none;
+                bottom: 10px;
+                right: 20px;
+                position: absolute;
+                background-color: #000;
+            }
+			code {
+				white-space: pre-wrap;       /* css-3 */
+				white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+				white-space: -pre-wrap;      /* Opera 4-6 */
+				white-space: -o-pre-wrap;    /* Opera 7 */
+				word-wrap: break-word;       /* Internet Explorer 5.5+ */
+			}
+        </style>
 	</head>
 
 	<body>
@@ -58,59 +100,53 @@
 		<div id="container" align="center">
 			<div class="inner">
 				<header>
-					<h1 align="center">Celeritas Battery Monitoring System</h1>
+					<h1 align="center">Celeritas BMS</h1>
+					<h3 align="center">Battery Monitoring System</h3>
 				</header>
-			<p align="left">
-		
-			</p>
-				<a	href="images/bpshost1.jpg">
-					<img src="images/bpshost1.jpg" class="img-responsive"> </img>
-				</a>
-			<p>
 				
-			</p>
-				<a	href="images/bpshost2.jpg">
-					<img src="images/bpshost2.jpg" class="img-responsive"> </img>
-				</a>
-			<p>
 				
-			</p>	
-				<a	href="images/bpshost3.jpg">
-					<img src="images/bpshost3.jpg" class="img-responsive"> </img>
-				</a>
-			<p>
+				<p align="left">
+			
+				<div class="row">
+					<a	href="images/bpshost1.jpg" data-toggle="lightbox" data-gallery="multiimages" data-title="In Space No One Can Hear You Navitas" class="col-sm-4">
+						<img src="images/bpshost1.jpg" class="img-responsive"> </img>
+					</a>
+					
+					<a	href="images/bpshost2.jpg" data-toggle="lightbox" data-gallery="multiimages" data-title="In Space No One Can Hear You Navitas" class="col-sm-4">
+						<img src="images/bpshost2.jpg" class="img-responsive"> </img>
+					</a>
+
+					<a	href="images/bpshost3.jpg" data-toggle="lightbox" data-gallery="multiimages" data-title="In Space No One Can Hear You Navitas" class="col-sm-4"  class="img-responsive">
+						<img src="images/bpshost3.jpg" class="img-responsive"> </img>
+					</a>
+				</div>
 				
-			</p>			
-				<a	href="images/top bps host.png">
-					<img src="images/top bps host.png" class="img-responsive"> </img>
-				</a>
-			<p>
+				<div class="col-md-12">	
+					<div class="row">		
+						<a	href="images/top bps host.png" data-toggle="lightbox" data-gallery="multiimages" data-title="In Space No One Can Hear You Navitas" class="col-sm-4">
+							<img src="images/top bps host.png" class="img-responsive"> </img>
+						</a>
+					
+						<a	href="images/bottom bps host.png" data-toggle="lightbox" data-gallery="multiimages" data-title="In Space No One Can Hear You Navitas" class="col-sm-4">
+							<img src="images/bottom bps host.png" class="img-responsive"> </img>
+						</a>
+					</div>
+				</div>
 				
-			</p>			
-				<a	href="images/bottom bps host.png">
-					<img src="images/bottom bps host.png" class="img-responsive"> </img>
-				</a>
-			<p>
+				<div class="row">			
+					<a	href="images/bpspower1.jpg" data-toggle="lightbox" data-gallery="multiimages" data-title="In Space No One Can Hear You Navitas" class="col-sm-4">
+						<img src="images/bpspower1.jpg" class="img-responsive"> </img>
+					</a>
+							
+					<a	href="images/top bps power.png" data-toggle="lightbox" data-gallery="multiimages" data-title="In Space No One Can Hear You Navitas" class="col-sm-4">
+						<img src="images/top bps power.png" class="img-responsive"> </img>
+					</a>
+							
+					<a	href="images/bottom bps power.png" data-toggle="lightbox" data-gallery="multiimages" data-title="In Space No One Can Hear You Navitas" class="col-sm-4">
+						<img src="images/bottom bps power.png" class="img-responsive"> </img>
+					</a>
+				</div>
 				
-			</p>			
-				<a	href="images/bpspower1.jpg">
-					<img src="images/bpspower1.jpg" class="img-responsive"> </img>
-				</a>
-			<p>
-				
-			</p>			
-				<a	href="images/top bps power.png">
-					<img src="images/top bps power.png" class="img-responsive"> </img>
-				</a>
-			<p>
-				
-			</p>			
-				<a	href="images/bottom bps power.png">
-					<img src="images/bottom bps power.png" class="img-responsive"> </img>
-				</a>
-			<p>
-				
-			</p>						
 			</div>
 		</div>
 
@@ -119,5 +155,60 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
 		<script src="js/bootstrap.min.js"></script>
+		<script src="js/ekko-lightbox.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function ($) {
+				// delegate calls to data-toggle="lightbox"
+				$(document).delegate('*[data-toggle="lightbox"]:not([data-gallery="navigateTo"])', 'click', function(event) {
+					event.preventDefault();
+					return $(this).ekkoLightbox({
+						onShown: function() {
+							if (window.console) {
+								return console.log('Checking our the events huh?');
+							}
+						},
+						onNavigate: function(direction, itemIndex) {
+							if (window.console) {
+								return console.log('Navigating '+direction+'. Current item: '+itemIndex);
+							}
+						}
+					});
+				});
+
+				//Programatically call
+				$('#open-image').click(function (e) {
+					e.preventDefault();
+					$(this).ekkoLightbox();
+				});
+				$('#open-youtube').click(function (e) {
+					e.preventDefault();
+					$(this).ekkoLightbox();
+				});
+
+				// navigateTo
+				$(document).delegate('*[data-gallery="navigateTo"]', 'click', function(event) {
+					event.preventDefault();
+					return $(this).ekkoLightbox({
+						onShown: function() {
+						
+							var a = this.modal_content.find('.modal-footer a');
+							if(a.length > 0) {
+								
+								a.click(function(e) {
+
+									e.preventDefault();
+									this.navigateTo(2);
+
+								}.bind(this));
+
+							}
+
+						}
+					});
+				});
+
+
+			});
+		</script>
 	</body>
 </html>
