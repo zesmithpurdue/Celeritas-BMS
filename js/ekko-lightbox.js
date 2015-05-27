@@ -393,6 +393,7 @@ License: https://github.com/ashleydw/lightbox/blob/master/LICENSE
     onHidden: function() {},
     onNavigate: function() {},
     onContentLoaded: function() {},
+    }
   };
 
 }).call(this);
