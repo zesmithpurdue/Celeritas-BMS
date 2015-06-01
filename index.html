@@ -103,54 +103,68 @@
 					<h1 align="center">Celeritas BMS</h1>
 					<h3 align="center">Battery Monitoring System</h3>
 				</header>
+				<p>
+				For the team's 2011 car, Celeritas, I was assigned to the Battery Protection System (BPS) team.  The BPS was designed to monitor the temperature, voltage, and current of the battery packs, and ensure 
+				that the packs remain in safe operating conditions.  If the packs drifted out of bounds, the system would send a notice via the auxiliary power to the driver and shut down.  There were two main components
+				to the BPS the Logic Host and the Lithium Ion Monitoring Modules (LIMMs).  The Logic Host acted as the main control board, and interfaced with the LIMMs via SPI and the rest of the car via CAN.  The LIMMs
+				were placed inside each battery pack and took measurements on the batteries, and balanced the cells.  The Logic Host could control up to 8 LIMMs. The team consisted of two people, and we both split up to work on different sections of the project. 
+				I worked on the Logic Host and the Power Systems boards, while my friend worked on the Lithium Ion Monitoring Modules. 
 				
+				We decided to implement a modular battery pack system with Celeritas. Past solar cars used only one "race pack". The race pack is usually designed to balance energy storage and battery weight, in the case of 
+				the Shell Eco-Marathon, this leads to very small battery packs that store enough energy for about 30 minutes of use. With Celeritas, we decided we'd design the race pack to be modular and expandable, to lengthen 
+				drive time for non-race activities, where weight didn't matter. The BPS was designed to support up to 8 Battery Packs, this way we could save weight during the race, and still have the energy storage for an 
+				afternoon long outreach event on a cloudy winter day. 
 				
-				<p align="left">
-				<div class="col-md-12">	
-					<div class="row">
-						<a	href="images/bpshost1.jpg" data-toggle="lightbox" data-gallery="multiimages" data-title="In Space No One Can Hear You Navitas" class="col-sm-4">
-							<img src="images/bpshost1.jpg" class="img-responsive"> </img>
-						</a>
-						
-						<a	href="images/bpshost2.jpg" data-toggle="lightbox" data-gallery="multiimages" data-title="In Space No One Can Hear You Navitas" class="col-sm-4">
-							<img src="images/bpshost2.jpg" class="img-responsive"> </img>
-						</a>
+				The Logic Host of the BPS is built around a PIC 24 microcontroller. The microcontroller talks with the battery pack via SPI and with the other electronics on board the car via CAN. The LIMMs in each battery
+				pack take voltage, current, and temperature readings, and report it to the Logic Host. The microcontroller sends this information over CAN to the Telemetry System and the Driver Display.  The Telemetry System transmits
+				the data to be logged by an offboard laptop for debugging and race diagnostic purposes. This lets us tell the driver things like "You need to drive a bit slower in the sun on the next lap" during the race. The Driver Display
+				shows the driver the relevant information from the BMS. Things like battery voltage are relatively useless for the driver and serve as a distraction, where as things like "Hey your car is about to shut down because you drained your
+				batteries dummy" are slightly more useful. 
+				</p>
+				
+				<div class="row">
+                    <div class="col-md-12">
+						<div class="row">
+							<a	href="images/bps-host1-800px.png" data-toggle="lightbox" data-gallery="multiimages" data-title="BPS Logic Host: Microcontroller" 
+							data-footer="Now fill it with whiskey" class="col-sm-4">
+								<img src="images/bps-host1-800px.png" class="img-responsive"> </img>
+							</a>
+							
+							<a	href="images/bps-host2-800px.png" data-toggle="lightbox" data-gallery="multiimages" data-title="BPS Logic Host: Peripherals" class="col-sm-4">
+								<img src="images/bps-host2-800px.png" class="img-responsive"> </img>
+							</a>
 
-						<a	href="images/bpshost3.jpg" data-toggle="lightbox" data-gallery="multiimages" data-title="In Space No One Can Hear You Navitas" class="col-sm-4"  class="img-responsive">
-							<img src="images/bpshost3.jpg" class="img-responsive"> </img>
-						</a>
-					</div>
-				</div>
+							<a	href="images/bps-host3-800px.png" data-toggle="lightbox" data-gallery="multiimages" data-title="BPS Logic Host: Relay Enables" class="col-sm-4">
+								<img src="images/bps-host3-800px.png" class="img-responsive"> </img>
+							</a>
+						</div>
 				
-				<div class="col-md-12">	
-					<div class="row">		
-						<a	href="images/top bps host.png" data-toggle="lightbox" data-gallery="multiimages" data-title="In Space No One Can Hear You Navitas" class="col-sm-4">
-							<img src="images/top bps host.png" class="img-responsive"> </img>
-						</a>
-					
-						<a	href="images/bottom bps host.png" data-toggle="lightbox" data-gallery="multiimages" data-title="In Space No One Can Hear You Navitas" class="col-sm-4">
-							<img src="images/bottom bps host.png" class="img-responsive"> </img>
-						</a>
-					</div>
-				</div>
-				<div class="col-md-12">	
-					<div class="row">			
-						<a	href="images/bpspower1.jpg" data-toggle="lightbox" data-gallery="multiimages" data-title="In Space No One Can Hear You Navitas" class="col-sm-4">
-							<img src="images/bpspower1.jpg" class="img-responsive"> </img>
-						</a>
-								
-						<a	href="images/top bps power.png" data-toggle="lightbox" data-gallery="multiimages" data-title="In Space No One Can Hear You Navitas" class="col-sm-4">
-							<img src="images/top bps power.png" class="img-responsive"> </img>
-						</a>
-								
-						<a	href="images/bottom bps power.png" data-toggle="lightbox" data-gallery="multiimages" data-title="In Space No One Can Hear You Navitas" class="col-sm-4">
-							<img src="images/bottom bps power.png" class="img-responsive"> </img>
-						</a>
-					</div>
-				</div>
+						<div class="row">		
+							<a	href="images/top-bps-host-800px.png" data-toggle="lightbox" data-gallery="multiimages" data-title="BPS Logic Host: Top Layer" class="col-sm-4">
+								<img src="images/top-bps-host-800px.png" class="img-responsive"> </img>
+							</a>
+						
+							<a	href="images/bottom-bps-host-800px.png" data-toggle="lightbox" data-gallery="multiimages" data-title="BPS Logic Host: Bottom Layer" class="col-sm-4">
+								<img src="images/bottom-bps-host-800px.png" class="img-responsive"> </img>
+							</a>
+						</div>
+			
 				
+						<div class="row">			
+							<a	href="images/bps-power1-800px.png" data-toggle="lightbox" data-gallery="multiimages" data-title="BPS Power Schematic" class="col-sm-4">
+								<img src="images/bps-power1-800px.png" class="img-responsive"> </img>
+							</a>
+									
+							<a	href="images/top-bps-power-800px.png" data-toggle="lightbox" data-gallery="multiimages" data-title="BPS Power: Top Layer" class="col-sm-4">
+								<img src="images/top-bps-power-800px.png" class="img-responsive"> </img>
+							</a>
+									
+							<a	href="images/bottom-bps-power-800px.png" data-toggle="lightbox" data-gallery="multiimages" data-title="BPS Power: Bottom Layer" class="col-sm-4">
+								<img src="images/bottom-bps-power-800px.png" class="img-responsive"> </img>
+							</a>
+						</div>
+				</div>
 			</div>
-		</div>
 
 		
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -175,16 +189,6 @@
 							}
 						}
 					});
-				});
-
-				//Programatically call
-				$('#open-image').click(function (e) {
-					e.preventDefault();
-					$(this).ekkoLightbox();
-				});
-				$('#open-youtube').click(function (e) {
-					e.preventDefault();
-					$(this).ekkoLightbox();
 				});
 
 				// navigateTo
