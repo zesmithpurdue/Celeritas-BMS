@@ -3,20 +3,59 @@
 	<head>
 		<meta charset='utf-8'>
 		<meta http-equiv="X-UA-Compatible" content="chrome=1">
-		<link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-	
+		<<link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
 		<link rel="stylesheet" href="css/bootstrap.min.css">
-
-		<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
-		<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
-		<script src="js/modernizr.js"></script> <!-- Modernizr -->
+		
+		<link rel="stylesheet" type="text/css" href="css/fresco.css">
 		
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		<title>Zachary Smith by zesmithpurdue</title>
 		
-	
+		<style type="text/css">
+            /* i like padding - you can ignore this css. see the actual css / less files in the repository for styling the gallery navigation */
+            div.row {
+                margin-bottom: 15px;
+            }
+
+            body {
+                padding-bottom: 50px;
+            }
+
+            div.top-header {
+                margin-bottom:100px;
+            }
+
+            h3.page-header {
+                margin-top: 50px;
+            }
+
+            figure {
+                position: relative;
+            }
+
+            figure figcaption {
+                font-size: 22px;
+                color: #fff;
+                text-decoration: none;
+                bottom: 10px;
+                right: 20px;
+                position: absolute;
+                background-color: #000;
+            }
+			code {
+				white-space: pre-wrap;       /* css-3 */
+				white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+				white-space: -pre-wrap;      /* Opera 4-6 */
+				white-space: -o-pre-wrap;    /* Opera 7 */
+				word-wrap: break-word;       /* Internet Explorer 5.5+ */
+			}
+        </style> 
+		
 	</head>
 
 	<body>
@@ -93,81 +132,98 @@
 				shows the driver the relevant information from the BMS. Things like battery voltage are relatively useless for the driver and serve as a distraction, where as things like "Hey your car is about to shut down because you drained your
 				batteries dummy" are slightly more useful. 
 				</p>
-			</div>
-				<ul class="cd-items cd-container">
-					<li class="cd-item">
-						<img src="images/bps-host1-800px.png" alt="Item Preview">
-						<a href="#0" class="cd-trigger">Quick View</a>
-					</li> <!-- cd-item -->
-
-					<li class="cd-item">
-						<img src="images/bps-host2-800px.png" alt="Item Preview">
-						<a href="#0" class="cd-trigger">Quick View</a>
-					</li> <!-- cd-item -->
-
-					<li class="cd-item">
-						<img src="images/bps-host3-800px.png" alt="Item Preview">
-						<a href="#0" class="cd-trigger">Quick View</a>
-					</li> <!-- cd-item -->
-
-					<li class="cd-item">
-						<img src="images/top-bps-host-800px.png" alt="Item Preview">
-						<a href="#0" class="cd-trigger">Quick View</a>
-					</li> <!-- cd-item -->
-
-					<li class="cd-item">
-						<img src="images/bottom-bps-host-800px.png" alt="Item Preview">
-						<a href="#0" class="cd-trigger">Quick View</a>
-					</li> <!-- cd-item -->
-
-					<li class="cd-item">
-						<img src="images/bps-power1-800px.png" alt="Item Preview">
-						<a href="#0" class="cd-trigger">Quick View</a>
-					</li> <!-- cd-item -->
-
-					<li class="cd-item">
-						<img src="images/top-bps-power-800px.png" alt="Item Preview">
-						<a href="#0" class="cd-trigger">Quick View</a>
-					</li> <!-- cd-item -->
-
-					<li class="cd-item">
-						<img src="images/bottom-bps-power-800px.png" alt="Item Preview">
-						<a href="#0" class="cd-trigger">Quick View</a>
-					</li> <!-- cd-item -->
-				</ul> <!-- cd-items -->
-				
-				<div class="cd-quick-view">
-					<div class="cd-slider-wrapper">
-						<ul class="cd-slider">
-							<li class="selected"><img src="images/bps-host1-800px.png" alt="Product 1"></li>
-							<li><img src="images/bps-host2-800px.png" alt="Product 2"></li>
-							<li><img src="images/bps-host3-800px.png" alt="Product 3"></li>
-						</ul> <!-- cd-slider -->
-
-						<ul class="cd-slider-navigation">
-							<li><a class="cd-next" href="#0">Prev</a></li>
-							<li><a class="cd-prev" href="#0">Next</a></li>
-						</ul> <!-- cd-slider-navigation -->
-					</div> <!-- cd-slider-wrapper -->
-
-					<div class="cd-item-info">
-						<h2>Produt Title</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, omnis illo iste ratione. Numquam eveniet quo, ullam itaque expedita impedit. Eveniet, asperiores amet iste repellendus similique reiciendis, maxime laborum praesentium.</p>
-
-						
-					</div> <!-- cd-item-info -->
-					<a href="#0" class="cd-close">Close</a>
-				</div> <!-- cd-quick-view -->
 			
-		</div>
-		
+				<div class="row">
+					<div class="col-md-12">
+						<div class="col-md-4">
+							<a href="images/bps-host1_orig.jpg"
+							   class="fresco"
+							   data-fresco-caption=" words go here and they also are lots of words and words go here and they also are lots of words and 
+							   words go here and they also are lots of words and words go here and they also are lots of words and words go here and they also are lots of words and 
+							   words go here and they also are lots of words and words go here and they also are lots of words and words go here and they also are lots of words and 
+							   words go here and they also are lots of words and words go here and they also are lots of words and words go here and they also are lots of words and 
+							   words go here and they also are lots of words and words go here and they also are lots of words and words go here and they also are lots of words and 
+							   words go here and they also are lots of words and words go here and they also are lots of words and words go here and they also are lots of words and 
+							   words go here and they also are lots of words and words go here and they also are lots of words and words go here and they also are lots of words and "
+							   data-fresco-group="unique_name">
+							   <img src="images/bps-host1-800px.png" class="img-responsive" />
+							</a>
+						</div>	
+						
+						<div class="col-md-4">
+							<a href="images/bps-host2_orig.jpg"
+							   class="fresco"
+							   data-fresco-group="unique_name">
+							   <img src="images/bps-host2-800px.png" class="img-responsive" />
+							   
+							</a>
+						</div>	
+							
+						<div class="col-md-4">
+							<a href="images/bps-host3_orig.jpg"
+							   class="fresco"
+							   data-fresco-group="unique_name">
+							   <img src="images/bps-host3-800px.png" class="img-responsive" />
+							</a>
+						</div>	
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-md-12">
+						<div class="col-md-4">
+							<a href="images/top-bps-host_orig.png"
+							   class="fresco"
+							   data-fresco-group="unique_name">
+							   <img src="images/top-bps-host-800px.png" class="img-responsive" />
+							</a>
+						</div>	
+							
+						<div class="col-md-4">
+							<a href="images/bottom-bps-host_orig.png"
+							   class="fresco"
+							   data-fresco-group="unique_name">
+							   <img src="images/bottom-bps-host-800px.png" class="img-responsive" />
+							</a>
+						</div>	
+							
+						<div class="col-md-4">
+							<a href="images/bps-power1_orig.jpg"
+							   class="fresco"
+							   data-fresco-group="unique_name">
+							   <img src="images/bps-power1-800px.png" class="img-responsive" />
+							</a>
+						</div>	
+					</div>
+				</div>
+				
+				<div class="row"> 
+					<div class="col-md-12">
+						<div class="col-md-4">
+							<a href="images/top-bps-power_orig.png"
+							   class="fresco"
+							   data-fresco-group="unique_name">
+							   <img src="images/top-bps-power-800px.png" class="img-responsive" />
+							</a>
+						</div>	
+							
+						<div class="col-md-4">
+							<a href="images/bottom-bps-power_orig.png"
+							   class="fresco"
+							   data-fresco-group="unique_name">
+							   <img src="images/bottom-bps-power-800px.png" class="img-responsive" />
+							</a>
+						</div>	
+					</div>
+				</div>
+			</div>
+		</div>		
+
 		
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script type="text/javascript" src="js/fresco.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		<script src="js/main.js"></script> <!-- Resource jQuery -->
-		<script src="js/velocity.min.js"></script>
-		
 	</body>
 </html>
