@@ -106,26 +106,20 @@
 			
 			<div class="inner">	
 				<div align="justify">
-					<p>
-						For the team's 2011 car, Celeritas, I was assigned to the Battery Protection System (BPS) team.  The BPS was designed to monitor the temperature, voltage, and current of the battery packs, and ensure 
-					that the packs remain in safe operating conditions.  If the packs drifted out of bounds, the system would send a notice via the auxiliary power to the driver and shut down.  There were two main components
-					to the BPS the Logic Host and the Lithium Ion Monitoring Modules (LIMMs).  The Logic Host acted as the main control board, and interfaced with the LIMMs via SPI and the rest of the car via CAN.  The LIMMs
-					were placed inside each battery pack and took measurements on the batteries, and balanced the cells.  The Logic Host could control up to 8 LIMMs. The team consisted of two people, and we both split up to work on different sections of the project. 
-					I worked on the Logic Host and the Power Systems boards, while my friend worked on the Lithium Ion Monitoring Modules. 
-					</p>
-					<p>
-						We decided to implement a modular battery pack system with Celeritas. Past solar cars used only one "race pack". The race pack is usually designed to balance energy storage and battery weight, in the case of 
-					the Shell Eco-Marathon, this leads to very small battery packs that store enough energy for about 30 minutes of use. With Celeritas, we decided we'd design the race pack to be modular and expandable, to lengthen 
-					drive time for non-race activities, where weight didn't matter. The BPS was designed to support up to 8 Battery Packs, this way we could save weight during the race, and still have the energy storage for an 
-					afternoon long outreach event on a cloudy winter day. 
-					</p>
-					<p>
-						The Logic Host of the BPS is built around a PIC 24 microcontroller. The microcontroller talks with the battery pack via SPI and with the other electronics on board the car via CAN. The LIMMs in each battery
-					pack take voltage, current, and temperature readings, and report it to the Logic Host. The microcontroller sends this information over CAN to the Telemetry System and the Driver Display.  The Telemetry System transmits
-					the data to be logged by an offboard laptop for debugging and race diagnostic purposes. This lets us tell the driver things like "You need to drive a bit slower in the sun on the next lap" during the race. The Driver Display
-					shows the driver the relevant information from the BMS. Things like battery voltage are relatively useless for the driver and serve as a distraction, where as things like "Hey your car is about to shut down because you drained your
-					batteries dummy" are slightly more useful. 
-					</p>
+				
+				
+				<p>
+					I co-designed the Battery Protection System (BPS) for Purdue Solar Racing's 2011 car, Celeritas. The BPS was designed to have three boards. The Lithium Ion Monitoring Modules (LIMMs) were built into the battery pack. They measured the current, voltage, and temperature of the battery pack, and also controlled battery cell charge balancing. The Logic Host and the Auxiliary Power boards were placed in the rear junction box of the car. The Logic Host received the data from the LIMMs, and processed it. If any of the values were outside of safe operating parameters for the batteries, the Logic Host would disconnect the battery pack from the main power bus, and send a warning message to the driver. The Auxiliary Power board consisted of a DC to DC converter to power the 15V bus from the main power bus. I designed the Logic Host and the Auxiliary Power boards. 
+				</p>
+				
+				<p>
+					This was the first embedded system project I worked on. Being new to electronics and beginning with such a comparatively hard project was incredibly fun. You make mistakes, but those are the best and most memorable learning experiences. The schematics were drawn in OrCAD Capture, and the PCBs were designed in OrCAD Layout. 
+				</p>
+				
+				<p>
+					Celeritas would go on to win 1st place in the Urban Concept category at the Shell Eco-Marathon, posting the highest equivalent miles per gallon score at the race, while using this BPS design. After all the hard work, in the end, it is great seeing your project functioning and power the car as it races around to a 1st place finish.  
+				</p> 
+				
 				</div>
 			</div> 
 			
@@ -227,7 +221,10 @@
 						<div class="col-sm-3">
 							<a href="images/bottom-bps-power_orig.png"
 							   class="fresco"
-							   data-fresco-caption="The bottom layer of the BPS Power PCB is much of the same, so I'll leave an interesting story. "
+							   data-fresco-caption="The bottom layer of the BPS Power PCB is much of the same, so I'll leave an interesting story. One of the oversights with the power systems of the car, 
+							   was that we didn't think about what would happen when the car tried to regenerative break when the batteries were full. The motorcontroller was smart enough to protect itself.  
+							   The power point trackers had relays to disconnect when the battery was full. The DC to DC converter on the other hand, would get really upset about the volage spike and decide it'd 
+							   rather blow itself up. As a quick fix we added a crowbar circuit that would latch power and ground together when the voltage climbed too high, and take out the fuse instead."
 							   data-fresco-group="unique_name">
 							   <img src="images/bottom-bps-power-800px.png" class="img-responsive" />
 							</a>
@@ -235,6 +232,44 @@
 					</div>
 				</div>
 			</div>
+			
+			<div class="inner">	
+				<div align="justify">
+					<h3 align="center">Lessons Learned</h3>	 
+					
+					<p>
+					Every project is a learning experience, and especially when you are doing something new, you learn immensely. I would run out of space and time if I put all the "lessons learned here", but here are a few of the important ones that stand out. 
+					</p>
+					<li>
+					<p>
+					The biggest flaw with the Logic Host/LIMM setup was the distance we had between the systems. SPI was not designed to work well over longish distances in electrically noisy environments, which is why most cars use a CAN bus. Our original design placed the battery pack a good 4ish feet away from the Logic Host, which would work fine until the motor turned on. The quick solution? Move the battery pack closer to the rear junction box (as seen in the header picture). 
+					</p>
+					</li>
+					<li>
+					<p>
+					If you aren't experienced in PCB layout, or with PCB parts in general, it's a bit hard tell how much space you have to work with exactly.  You can see in these boards, they are much much bigger than they need to be.  I decided it was better safe than sorry, and gave myself plenty of space to work with for routing and placing all the weird plastic connectors. I learned from this project, and my future PCB design for Navitas was much more space and weight efficient.  
+					</p>
+					</li>
+					<li>
+					<p>
+					A lot of tiny convention mistakes were also made when making the schematic. Some things, like the direction of the ports indication whether a signal is an input or an output, just help with readability of the schematics. Other things like not using the proper part packaging in the schematic lead to problems when you move to layout that eat up valuable time. Students learning the programs on their own tend to lead to these problems, and eventually you learn the hard way, why you do certain things certain ways.  
+					</p>
+					</li>
+					<li>
+					<p>
+					High power traces can be a bit tricky if you don't know how to properly utilize vias and route the traces. My power board was functional and served it's purpose, but the traces are a huge mess and could be cleaned up with more double sided traces and more properly placed vias. Spacing the parts better and utilizing better copper pours would also help tremendously.  
+					</p>
+					</li>
+					<li>
+					<p>
+					Labels for everrrryyythingg help out so much, especially for prototyping and hardware debugging. The connectors are labeled, but the signals could have been labeled much better. Because of the nature of solar racing being a project with essentially a prototype final result, proper labels turned out to be a big thing that we pushed for in future boards. It makes a big difference. 
+					</p>
+					</li>
+					<li>
+					<p>
+					Connectors have to be “mechanical engineer proof”. Connectors need to be impossible to reverse.  Even then, if it is possible, connectors need to be designed to do no damage if they are reverse, because someone will decide to do the impossible and reverse the irreversible. Go out of your way to color code and label everything, because someone will find a way to break it, and then you'll have to fix it. 
+					</p>
+					</li>
 		</div>		
 
 		
