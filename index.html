@@ -49,7 +49,7 @@
 	</head>
 
 	<body>
-		<nav class="navbar navbar-default">
+		<nav class="navbar navbar-default" role="navigation">
 			<div class="container">
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
@@ -59,28 +59,32 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" class="active" href="http://www.zacharysmith.science">Zachary Smith</a>
 				</div>
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<ul class="nav navbar-nav navbar-right">
+					<ul class="nav navbar-nav">
+						<li> 
+							<a class="active" href="http://www.zacharysmith.science"><strong>Zachary Smith</strong></a>
+						</li>
+											
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Solar Cars<span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
 								<li><a href="http://www.zacharysmith.science/celeritas">Celeritas</a></li>
 								<li><a href="http://www.zacharysmith.science/navitas">Navitas</a></li>
 							</ul>
+						</li>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Embedded Systems Projects<span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
 								<li><a href="http://www.zacharysmith.science/celeritas-bms">Battery Monitoring System - Celeritas</a></li>
 								<li><a href="http://www.zacharysmith.science/navitas-lcu">Light Control Unit - Navitas</a></li>
 							</ul>
-						<li><a href="http://www.zacharysmith.science/works-of-navitas">Art</a></li>
-						<li><a href="http://www.zacharysmith.science/resume">Résumé<span class="sr-only">(current)</span></a></li>
-							
 						</li>
+						<li><a href="http://www.zacharysmith.science/works-of-navitas">Art</a></li>
+						<li><a href="http://www.zacharysmith.science/contact">Contact<span class="sr-only">(current)</span></a></li>
+							
 					</ul>
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
@@ -106,20 +110,17 @@
 			
 			<div class="inner">	
 				<div align="justify">
-				
-				
-				<p>
-					I co-designed the Battery Protection System (BPS) for Purdue Solar Racing's 2011 car, Celeritas. The BPS was designed to have three boards. The Lithium Ion Monitoring Modules (LIMMs) were built into the battery pack. They measured the current, voltage, and temperature of the battery pack, and also controlled battery cell charge balancing. The Logic Host and the Auxiliary Power boards were placed in the rear junction box of the car. The Logic Host received the data from the LIMMs, and processed it. If any of the values were outside of safe operating parameters for the batteries, the Logic Host would disconnect the battery pack from the main power bus, and send a warning message to the driver. The Auxiliary Power board consisted of a DC to DC converter to power the 15V bus from the main power bus. I designed the Logic Host and the Auxiliary Power boards. 
-				</p>
-				
-				<p>
-					This was the first embedded system project I worked on. Being new to electronics and beginning with such a comparatively hard project was incredibly fun. You make mistakes, but those are the best and most memorable learning experiences. The schematics were drawn in OrCAD Capture, and the PCBs were designed in OrCAD Layout. 
-				</p>
-				
-				<p>
-					Celeritas would go on to win 1st place in the Urban Concept category at the Shell Eco-Marathon, posting the highest equivalent miles per gallon score at the race, while using this BPS design. After all the hard work, in the end, it is great seeing your project functioning and power the car as it races around to a 1st place finish.  
-				</p> 
-				
+					<p>
+						I co-designed the Battery Protection System (BPS) for Purdue Solar Racing's 2011 car, Celeritas. The BPS was designed to have three boards. The Lithium Ion Monitoring Modules (LIMMs) were built into the battery pack. They measured the current, voltage, and temperature of the battery pack, and also controlled battery cell charge balancing. The Logic Host and the Auxiliary Power boards were placed in the rear junction box of the car. The Logic Host received the data from the LIMMs, and processed it. If any of the values were outside of safe operating parameters for the batteries, the Logic Host would disconnect the battery pack from the main power bus, and send a warning message to the driver. The Auxiliary Power board consisted of a DC to DC converter to power the 15V bus from the main power bus. I designed the Logic Host and the Auxiliary Power boards.		
+					</p>
+					
+					<p>
+						This was the first embedded system project I worked on. Being new to electronics and beginning with such a comparatively hard project was incredibly fun. You make mistakes, but those are the best and most memorable learning experiences. The schematics were drawn in OrCAD Capture, and the PCBs were designed in OrCAD Layout.				
+					</p>
+					
+					<p>
+						Celeritas would go on to win 1st place in the Urban Concept category at the Shell Eco-Marathon, posting the highest equivalent miles per gallon score at the race, while using this BPS design. After all the hard work, in the end, it is great seeing your project functioning and power the car as it races around to a 1st place finish.	
+					</p> 
 				</div>
 			</div> 
 			
@@ -129,11 +130,7 @@
 						<div class="col-sm-3">
 							<a href="images/bps-host1_orig.jpg"
 							   class="fresco"
-							   data-fresco-caption="The first page of the BPS Host schematic contains the microcontroller and it's decoupling capacitors
-							   and oscillator. This was created during my first year of solar racing,
-							   which is why all the ports are facing the same direction. I didn't realize at the time that the direction of the port arrow was a 
-							   convention for indicating whether the signal was an input, output, or bi-directional, so I just picked the direction I thought 
-							   'looked nicer'."
+							   data-fresco-caption="The first page of the BPS Host schematic contains the microcontroller and its decoupling capacitors and oscillator. This was created during my first year of solar racing, which is why all the ports are facing the same direction. I didn't realize at the time that the direction of the port arrow was a convention for indicating whether the signal was an input, output, or bi-directional, so I just picked the direction I thought &quot;looked nicer&quot;."
 							   data-fresco-group="unique_name">
 							   <img src="images/bps-host1-800px.png" class="img-responsive" />
 							</a>
@@ -142,23 +139,16 @@
 						<div class="col-sm-3">
 							<a href="images/bps-host2_orig.jpg"
 							   class="fresco"
-							   data-fresco-caption="The second page of the BPS Host schematic contains the peripherals for the board. This includes the switching power supply, 
-							   charge indicator LEDs, and the communication chips and connectors (CAN and serial). Bi-color LEDs were used to indicate battery pack status, red for drained,
-							   yellow for charging, and green for charged. Orange_sense and Orange_led were a hack to be able to sense 
-							   what stage of charging the external charger was in. We used an off the shelf LiFePO4 battery charger, and ran wires from the charge indicator LEDs
-							   to the microcontroller, to figure out the charge status."
+							   data-fresco-caption="The second page of the BPS Host schematic contains the peripherals for the board. This includes the switching power supply, charge indicator LEDs, and the communication chips and connectors (CAN and serial). Bi-color LEDs were used to indicate battery pack status, red for drained, yellow for charging, and green for charged. <code>Orange_sense</code> and <code>Orange_led</code> were a hack to be able to sense what stage of charging the external charger was in. We used an off the shelf LiFePO4 battery charger, and ran wires from the charge indicator LEDs to the microcontroller, to figure out the charge status."
 							   data-fresco-group="unique_name">
-							   <img src="images/bps-host2-800px.png" class="img-responsive" />
-							   
+							   <img src="images/bps-host2-800px.png" class="img-responsive" />  
 							</a>
 						</div>	
 							
 						<div class="col-sm-3">
 							<a href="images/bps-host3_orig.jpg"
 							   class="fresco"
-							   data-fresco-caption="The third page of the BPS Host schematic contains the controls and connectors for the battery packs. Our design supported up to 8 
-							   modular battery packs, connected in parallel to increase drive time during cloudy conditions (I.E all of Indiana). Future designs used an updated chip 
-							   which allowed daisy chaining the batteries in order to &quot;go fast&quot;(the technical term)."
+							   data-fresco-caption="The third page of the BPS Host schematic contains the controls and connectors for the battery packs. Our design supported up to 8 modular battery packs, connected in parallel to increase drive time during cloudy conditions (i.e. all of Indiana). Future designs used an updated chip which allowed daisy-chaining the batteries in order to &quot;go fast&quot; (the technical term)."
 							   data-fresco-group="unique_name">
 							   <img src="images/bps-host3-800px.png" class="img-responsive" />
 							</a>
@@ -167,11 +157,7 @@
 						<div class="col-sm-3">
 							<a href="images/top-bps-host_orig.png"
 							   class="fresco"
-							   data-fresco-caption="This is the top side of the BPS Host PCB, designed using OrCAD Layout. This was the first PCB I designed. The hardest 
-							   part of designing this board, was trying to understand just how much room I needed to run traces, and how much space the components needed.
-							    As a result, I erred on the side of caution, and ended up with a lot of space on the board. There are also a few lazy traces that a more 
-								experienced me would have fixed. One thing that I managed to do that many novice board designers miss, was properly naming the connectors.
-								 Anyone who works on the board in the future will thank you."
+							   data-fresco-caption="This is the top side of the BPS Host PCB, designed using OrCAD Layout. This was the first PCB I designed. The hardest part of designing this board, was trying to understand just how much room I needed to run traces, and how much space the components needed. As a result, I erred on the side of caution, and ended up with a lot of space on the board. There are also a few lazy traces that a more experienced me would have fixed. One thing that I managed to do that many novice board designers miss, was properly naming the connectors. Anyone who works on the board in the future will thank you."
 							   data-fresco-group="unique_name">
 							   <img src="images/top-bps-host-800px.png" class="img-responsive" />
 							</a>
@@ -184,10 +170,7 @@
 						<div class="col-sm-3">
 							<a href="images/bottom-bps-host_orig.png"
 							   class="fresco"
-							   data-fresco-caption="The bottom side of the BPS Host PCB, not quite as interesting as the top. Being my first board, I didn't manage to take
-							   advantage of both sides to reduce the board size. The parts that I did put on the back, were all parts that needed to be as physically close
-							   the microcontroller as possible, decoupling capacitors and the oscillator. This allowed them to be as close to the micro as possible, without blocking
-							   traces on the top layer."
+							   data-fresco-caption="The bottom side of the BPS Host PCB; not quite as interesting as the top. Being my first board, I didn't manage to take advantage of both sides to reduce the board size. The parts that I did put on the back were all parts that needed to be as physically close the microcontroller as possible: decoupling capacitors and the oscillator. This allowed them to be as close to the micro as possible, without blocking traces on the top layer."
 							   data-fresco-group="unique_name">
 							   <img src="images/bottom-bps-host-800px.png" class="img-responsive" />
 							</a>
@@ -196,10 +179,7 @@
 						<div class="col-sm-3">
 							<a href="images/bps-power1_orig.jpg"
 							   class="fresco"
-							   data-fresco-caption="The BPS Power board supplies auxiliary power to the car via a VICOR dc to dc converter. The board was designed to be stacked 
-							   double decker style with the BPS Host, based off of a previous cars BPS design. If you look closely you can also see a mistake that made it past 
-							   design reviews, the fuse F3 doesn't actually fuse anything. Luckily we discovered it before we needed it, during a &quot;why do things have power when they
-							   should be off&quot; debug session, and the fix was simple. This circuit became known as &quot;the decoy circuit&quot;. "
+							   data-fresco-caption="The BPS Power board supplies auxiliary power to the car via a VICOR DC to DC converter. The board was designed to be stacked double-decker style with the BPS Host, based off of a previous car’s BPS design. If you look closely you can also see a mistake that made it past design reviews: the fuse F3 doesn't actually fuse anything. Luckily, we discovered it before we needed it, during a &quot;why do things have power when they should be off&quot; debug session, and the fix was simple. This circuit became known as &quot;the decoy circuit&quot;. "
 							   data-fresco-group="unique_name">
 							   <img src="images/bps-power1-800px.png" class="img-responsive" />
 							</a>
@@ -208,11 +188,7 @@
 						<div class="col-sm-3">
 							<a href="images/top-bps-power_orig.png"
 							   class="fresco"
-							   data-fresco-caption="This is the top layer of the BPS Power PCB, made in OrCAD Layout. This is also the first board I had designed intended to carry
-							   any sort of power. It shows in how messy all the high current traces are routed, everything is oversized, and the board did work, but I would definitely do 
-							   the board differet today. Most of the high power traces should have been run parallel on the top and bottom layer, with multiple vias in trace, instead of being big 
-							   fat winding traces. In a lot of cases, copper pours would have probably worked better than trying to fight the trace tool. Also there are quite a few thermal reliefs that
-							   should have been turned off. A lot of simple errors that are easy to make when your design team consists entirely of sophomores. Everything is a learning experience."
+							   data-fresco-caption="This is the top layer of the BPS Power PCB, made in OrCAD Layout. This is also the first board I had designed intended to carry any sort of power. It shows in how messy all the high-current traces are routed; everything is oversized, and the board did work, but I would definitely do the board different today. Most of the high power traces should have been run parallel on the top and bottom layer, with multiple vias in trace, instead of being giant winding traces. In a lot of cases, copper pours would have probably worked better than trying to fight the trace tool. Also, there are quite a few thermal reliefs that should have been turned off. A lot of simple errors that are easy to make when your design team consists entirely of sophomores. Everything is a learning experience."
 							   data-fresco-group="unique_name">
 							   <img src="images/top-bps-power-800px.png" class="img-responsive" />
 							</a>
@@ -221,10 +197,7 @@
 						<div class="col-sm-3">
 							<a href="images/bottom-bps-power_orig.png"
 							   class="fresco"
-							   data-fresco-caption="The bottom layer of the BPS Power PCB is much of the same, so I'll leave an interesting story. One of the oversights with the power systems of the car, 
-							   was that we didn't think about what would happen when the car tried to regenerative break when the batteries were full. The motorcontroller was smart enough to protect itself.  
-							   The power point trackers had relays to disconnect when the battery was full. The DC to DC converter on the other hand, would get really upset about the volage spike and decide it'd 
-							   rather blow itself up. As a quick fix we added a crowbar circuit that would latch power and ground together when the voltage climbed too high, and take out the fuse instead."
+							   data-fresco-caption="The bottom layer of the BPS Power PCB is much of the same, so I'll leave an interesting story. One of the oversights with the power systems of the car, was that we didn't think about what would happen when the car tried to regenerative brake when the batteries were full. The motorcontroller was smart enough to protect itself. The power point trackers had relays to disconnect when the battery was full. The DC to DC converter on the other hand, would get really upset about the voltage spike and decide it'd rather blow itself up. As a quick fix, we added a crowbar circuit that would latch power and ground together when the voltage climbed too high, and take out the fuse instead."
 							   data-fresco-group="unique_name">
 							   <img src="images/bottom-bps-power-800px.png" class="img-responsive" />
 							</a>
@@ -238,38 +211,34 @@
 					<h3 align="center">Lessons Learned</h3>	 
 					
 					<p>
-					Every project is a learning experience, and especially when you are doing something new, you learn immensely. I would run out of space and time if I put all the "lessons learned here", but here are a few of the important ones that stand out. 
+						Every project is a learning experience, and especially when you are doing something new, you learn immensely. Here are a few of the important ones that stand out:
 					</p>
 					<li>
-					<p>
-					The biggest flaw with the Logic Host/LIMM setup was the distance we had between the systems. SPI was not designed to work well over longish distances in electrically noisy environments, which is why most cars use a CAN bus. Our original design placed the battery pack a good 4ish feet away from the Logic Host, which would work fine until the motor turned on. The quick solution? Move the battery pack closer to the rear junction box (as seen in the header picture). 
-					</p>
+						The biggest flaw with the Logic Host/LIMM setup was the distance we had between the systems. SPI was not designed to work well over longish distances in electrically noisy environments, which is why most cars use a CAN bus. Our original design placed the battery pack more than a meter away from the Logic Host, which would work fine until the motor turned on. The quick solution? Move the battery pack closer to the rear junction box (as shown in the header picture).					
+					</li>
+					
+					<li>					
+						If you aren't experienced in PCB layout, or with PCB parts in general, it's a bit hard tell how much space you have to work with exactly. You can see in these boards, they are much much bigger than they need to be. I decided it was better safe than sorry, and gave myself plenty of space to work with for routing and placing all the weird plastic connectors. I learned from this project, and my future PCB design for Navitas was much more space and weight efficient.					
+					</li>
+					<li>				
+						A lot of tiny convention mistakes were also made when making the schematic. Some things, like the direction of the ports indication whether a signal is an input or an output, just help with readability of the schematics. Other things like not using the proper part packaging in the schematic lead to problems when you move to layout that eat up valuable time. Students learning the programs on their own tend to lead to these problems, and eventually you learn the hard way, why you do certain things certain ways.
+					</li>
+					<li>					
+						High power traces can be a bit tricky if you don't know how to properly utilize vias and route the traces. My power board was functional and served it's purpose, but the traces are a huge mess and could be cleaned up by using more double sided traces and using more, properly placed vias. Spacing the parts better and utilizing better copper pours would also help tremendously.
+					</li>
+					<li>					
+						Labels for <em> everrrryyythingg</em> help out so much, especially for prototyping and hardware debugging. The connectors are labeled, but the signals could have been labeled much better. Because of the nature of solar racing being a project with essentially a prototype final result, proper labels turned out to be a big thing that we pushed for in future boards. It makes a big difference.
 					</li>
 					<li>
-					<p>
-					If you aren't experienced in PCB layout, or with PCB parts in general, it's a bit hard tell how much space you have to work with exactly.  You can see in these boards, they are much much bigger than they need to be.  I decided it was better safe than sorry, and gave myself plenty of space to work with for routing and placing all the weird plastic connectors. I learned from this project, and my future PCB design for Navitas was much more space and weight efficient.  
-					</p>
+						Connectors have to be “mechanical engineer proof”. Connectors need to be impossible to reverse. Even then, if it is possible, connectors need to be designed to do no damage if they are reverse, because someone will decide to do the impossible and reverse the irreversible. Go out of your way to color code and label everything, because someone will find a way to break it, and then you'll have to fix it.
 					</li>
-					<li>
-					<p>
-					A lot of tiny convention mistakes were also made when making the schematic. Some things, like the direction of the ports indication whether a signal is an input or an output, just help with readability of the schematics. Other things like not using the proper part packaging in the schematic lead to problems when you move to layout that eat up valuable time. Students learning the programs on their own tend to lead to these problems, and eventually you learn the hard way, why you do certain things certain ways.  
-					</p>
-					</li>
-					<li>
-					<p>
-					High power traces can be a bit tricky if you don't know how to properly utilize vias and route the traces. My power board was functional and served it's purpose, but the traces are a huge mess and could be cleaned up with more double sided traces and more properly placed vias. Spacing the parts better and utilizing better copper pours would also help tremendously.  
-					</p>
-					</li>
-					<li>
-					<p>
-					Labels for everrrryyythingg help out so much, especially for prototyping and hardware debugging. The connectors are labeled, but the signals could have been labeled much better. Because of the nature of solar racing being a project with essentially a prototype final result, proper labels turned out to be a big thing that we pushed for in future boards. It makes a big difference. 
-					</p>
-					</li>
-					<li>
-					<p>
-					Connectors have to be “mechanical engineer proof”. Connectors need to be impossible to reverse.  Even then, if it is possible, connectors need to be designed to do no damage if they are reverse, because someone will decide to do the impossible and reverse the irreversible. Go out of your way to color code and label everything, because someone will find a way to break it, and then you'll have to fix it. 
-					</p>
-					</li>
+				</div>		
+	
+
+				<footer>
+					<p><a href="http://www.zacharysmith.science/contact">Contact</a> &middot; <a href="#">Press</a></p>
+				</footer>
+			</div>
 		</div>		
 
 		
